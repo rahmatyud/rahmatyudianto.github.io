@@ -1,0 +1,27 @@
+:root{--bg:#f6f7fb;--card:#fff;--text:#1f2430;--muted:#667085;--accent:#3b5bdb;--line:#e4e7ee}
+@media (prefers-color-scheme:dark){:root{--bg:#12141a;--card:#1b1e27;--text:#e8eaf0;--muted:#98a0b3;--accent:#7c93ff;--line:#2a2e3a;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+nav{position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;padding:12px 20px;flex-wrap:wrap;z-index:5}
+nav b{margin-right:auto;font-size:18px}
+nav a{color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:8px;font-size:14px}
+nav a.on,nav a:hover{background:var(--accent);color:#fff}
+main{max-width:860px;margin:0 auto;padding:28px 20px}
+h1{margin:0 0 4px;font-size:28px}
+h2{margin:28px 0 10px;font-size:20px;border-left:4px solid var(--accent);padding-left:10px}
+.meta{color:var(--muted);margin:0 0 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:12px}
+.card h3{margin:0 0 4px;font-size:16px}
+.card p{margin:0;color:var(--muted);font-size:14px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.gallery img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;cursor:zoom-in;background:var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:var(--card)}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;font-size:14px}
+th{background:var(--accent);color:#fff}
+a.btn{display:inline-block;margin-top:8px;color:var(--accent);font-weight:600;text-decoration:none}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:20;flex-direction:column;color:#fff;cursor:pointer}
+#lb.on{display:flex}
+#lb img{max-width:92%;max-height:80%;border-radius:10px}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:24px}
